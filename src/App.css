@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+
 .App {
   text-align: center;
 }
@@ -5,6 +8,272 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+body{
+  font-family: 'Uchen', serif;
+  /* overflow: hidden; */
+   background-image: url('./images/mainbgd.jpg');
+}
+::-webkit-scrollbar { display: none; }
+input{
+  height: 39px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-indent: 12px;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid #8080803d;
+  background: #d4cbcb3d;
+}
+::-webkit-input-placeholder{
+  color: rgba(128, 128, 128, 0.483);
+}
+.loginbtn{
+  color:white;
+  padding: 10px;
+  margin:20px 0px;
+  width: 100%;
+  border:none;
+  border-radius: 4px;
+  background-color: #159AFF;
+  box-shadow: 0px 5px 18px #d5cbcb00;
+  font-size:15px;
+  cursor: pointer;
+}
+.forms{
+  color: black;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.forgtpwd{
+  font-weight: 500;
+  color: #159AFF;
+  text-decoration: none;
+}
+.thumbs-wrapper{
+  display:none;
+}
+
+.carouselimg{
+  padding: 12px;
+  width: 320px;
+  height: 260px;
+}
+
+.socialbtn{
+    padding:5px 10px;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    text-align: center !important;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(138, 134, 134, 0.409);
+}
+.socialbtn a{
+  text-decoration: none;
+  color: white;
+}
+.socialicon{
+  margin-top:5px;
+}
+.socialiconstext{
+  font-size: small;
+  color: white;
+}
+.socialiconsall{
+  color: white;
+}
+.moreIcon a{
+  text-decoration: none;
+}
+.headtxt{
+  -webkit-tap-highlight-color:rgba(255, 255, 255, 0);
+  color: black;
+  font-size: 24px;
+  margin: 10px;
+  font-weight:500 !important;
+}
+.subheadtxt{
+  margin-top:5px;
+  font-size: 15px;
+}
+.scocialimgbtn{
+  border-radius: 5px;
+  padding:3px 7px;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(138, 134, 134, 0.409);
+  border: none;
+}
+.googleicontxt{
+  margin-top: 6px;
+  z-index: 1  ;
+}
+.socialgoogle a{
+  text-decoration: none;
+}
+.socialgoogle{
+  padding: 5px;
+  width:max-content;
+  background-color: white;
+}
+.icontxt{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  color: GREY;
+  font-weight: bold;
+}
+.socialappleicon{
+  font-size:25px;
+}
+.socialmicrosoft{
+  background-color: black;
+}
+.socialfacebook{
+  background-color: #1877F2;
+}
+.sociallinkedin{
+  background-color: #0966C2;
+}
+.socialtwitter{
+  background-color: #00A2F6;
+}
+.socialinstagram{
+  background: rgb(29, 15, 111);
+}
+.socialall{
+   color: grey !important;
+}
+.heart{
+   color: rgb(193, 32, 32);
+}
+.hearts{
+  display: flex;
+  font-weight: bolder !important;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.iconimg{
+  padding: -5PX !important;
+  height: 22px;
+  width: 26px;
+  margin-top: 3px;
+}
+.moreIcon{
+  padding: 8px;
+}
+.socialLinkedicon{
+  font-size: 25px;
+}
+.signinbtn{
+  width: 100%;
+    text-align: center;
+    border: 2px solid #309FF4;
+    color: #309FF4;
+    display: inline-block;
+    border-radius: 22px;
+    padding: 10px;
+    height: 44px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+@media (max-width:660px){
+  body{
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+     overflow: hidden !important;
+  }
+  .footer{
+    display:none !important;
+  }
+
+}
+
+.carouseltxt{
+  font-family: 'DM Sans', sans-serif;
+  padding: 10px;
+}
+.carousel .control-dots .dot{
+  width: 5px !important;
+  height: 5px !important;
+  box-shadow: none !important;
+  margin: 0 6px !important;
+  background-color: #00a2f6 !important;
+}
+
+.carousel.carousel-slider .control-arrow{
+  display: none;
+}
+.carousel-content{
+  color: black;
+}
+.carousel .slider-wrapper{
+  min-height: 480px;
+}
+.carouselbtn{
+  text-align: center;
+  margin: auto;
+  /* margin-top: 10px; */
+  background-color: #ECF7FE;
+  color: #159AFF;
+  font-weight: 600;
+  border-radius: 18px;
+  padding: 8px 20px;
+  border: none;
+  cursor: pointer;
+}
+.carousel-status{
+  display:none;
+}
+
+.carousel .control-dots {
+  margin:5px 0 !important;
+ }
+
+.bottomlink{
+ 
+  text-decoration: none;
+  color: #0091FF;
+}
+
+/* 2nd .carousel */
+.AutoRotatingCarousel-root{
+  z-index: -1;
+}
+
+.AutoRotatingCarousel-root-1{
+  z-index: 1;
+  position: absolute !important;
+  HEIGHT: 400PX;
+  WIDTH: 500PX;
+}
+.MuiBackdrop-root{
+  top: 100% !important;;
+}
+.AutoRotatingCarousel-arrowLeft-5{
+  display: none !important;
+}
+.AutoRotatingCarousel-arrowRight-6{
+  display: none !important;
+}
+.moreIcon{
+  width: 100%;
+  margin: 10px;
+  color: white !important;
+}
+.seconddiv{
+  margin: -15px;
+ padding:-14px !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {
