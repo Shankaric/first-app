@@ -1,24 +1,54 @@
-import React,{  useState } from 'react';
+import React from 'react';
 import $ from 'jquery';
 import './App.css';
 import mainlogo from './images/mainlogo.png'
 import google from './images/ICONS/GOOGLE.png'
 import microsoft from './images/ICONS/MICROSOFT.png'
 import { Container, Centerdiv, Socialcontainer } from './components/component-styles';
-import { FaApple, FaLinkedin, FaTwitter, FaFacebook, FaEllipsisH, FaHeart } from 'react-icons/fa';
+import { FaApple, FaLinkedin, FaTwitter, FaFacebook, FaEllipsisH, FaHeart, FaEyeSlash } from 'react-icons/fa';
 import CarouselComponent from "./components/carousel-component";
 
 
 function App() {
 
  
-  const [hidden, setHidden] = useState(true);
+  // const [hidden, setHidden] = useState(true);
+  $(document).ready(function(){
+    $(".seconddiv").hide();
+    $(".pasworddiv").hide();
+    $(".socialall").click(function(){
+      $(".firstdiv").hide();
+      $(".seconddiv").show();
+      $(".pasworddiv").hide();
+    });
+    $(".signinbtn").click(function(){
+      $(".firstdiv").show();
+      $(".seconddiv").hide();
+      $(".pasworddiv").hide();
+      $(".loginbtn").show();
+      $(".forgtpwd").show();
+    });
+    $(".btncontainer").click(function(){
+      $('.btncontainer').addClass("active");
+      $(".seconddiv").hide();
+      $(".forgtpwd").hide();
+      $(".socialmicrosoft").hide();
+      $(".sociallinkedin").hide();
+      $(".socialtwitter").hide();
+      $(".socialfacebook").hide();
+      $(".socialall").hide();
+     
+      
+    });
+    const btncontainer = document.querySelector('.btncontainer');
+    const pasworddiv = document.querySelector('.pasworddiv');
+    btncontainer.addEventListener('animationend', () => {
 
-
-  function showtext(){
-    console.log('hwlo text')
-  }
-
+      btncontainer.style.display="none";
+      pasworddiv.style.display="block";
+    });
+  });
+ 
   return (
     
     <div className="App">
@@ -28,28 +58,38 @@ function App() {
        
           <form className="forms">
           <img src={mainlogo} alt="logo" />  
-         
-          { hidden ?
-
-                  (<div className="firstdiv" >
-         
-                  <p className='headtxt'>Sign In</p>
+                  <div className="firstdiv" >
+                 <p className='headtxt'>Sign In</p>
                   <p className='subheadtxt'>to access POS home</p>
-                  <input type="text" placeholder='Enter your email' />
-                  <button className='loginbtn'>Next</button>
+                  <input type="text" className='email' placeholder='Enter your email' />
+                 
+                  <div className="pasworddiv">
+                  <br />
+                  <span ><input type="text" name="sampleInputone" placeholder='Enter your Password'/><FaEyeSlash className='fonteye' /></span>
+                  <button className='signinBtn'>Signin</button>
+                  <div className="otplinks">
+                    <a href="/" className='sendotp'>sign in using OTP</a>
+                    <a href="/" className='forgptpassword'>Forgot Password?</a>
+                  </div>
+                  </div>
+                  <div className="btncontainer" onClick="this.classList.toggle('active')">
+                      <span className="text">LOGIN</span>
+                    <span className='loader'></span>
+                  </div>
                   <a href="/forgotpwds" className='forgtpwd'>Forgot Password?</a>
+                
                   <br /><br /><br />  
                   <Socialcontainer>
-                    <button className='scocialimgbtn socialgoogle'><a href="/"><span className="icontxt"><img src={google} alt="Google logo" className="iconimg" /><span className='googleicontxt'>&ensp;Google</span></span></a></button>
-                    <button className='scocialimgbtn socialmicrosoft'><a href="/"><img src={microsoft} alt="microsoft logo"className="iconimg" /></a></button>
-                    <button className='socialbtn sociallinkedin'><a href="/"><FaLinkedin className='socialicon' /></a></button>
-                    <button className='socialbtn socialtwitter'><a href="/"><FaTwitter className='socialicon' /></a></button>
-                    <button className='socialbtn socialfacebook'><a href="/"><FaFacebook className='socialicon' /></a></button>
-                   <button className='socialbtn socialall' onClick={()=>{setHidden(false)}}><FaEllipsisH className='socialicon socialall' /></button>
+                    <button className='scocialimgbtn socialgoogle'><span className="icontxt"><img src={google} alt="Google logo" className="iconimg" /><span className='googleicontxt'>&ensp;Google</span></span></button>
+                    <button className='scocialimgbtn socialmicrosoft'><img src={microsoft} alt="microsoft logo"className="iconimg" /></button>
+                    <button className='socialbtn sociallinkedin'><FaLinkedin className='socialicon' /></button>
+                    <button className='socialbtn socialtwitter'><FaTwitter className='socialicon' /></button>
+                    <button className='socialbtn socialfacebook'><FaFacebook className='socialicon' /></button>
+                   <button type='button' className='socialbtn socialall'><FaEllipsisH className='socialicon socialall'></FaEllipsisH></button>
                   </Socialcontainer>
                 </div>
               
-                  ):(
+                
             <div className="seconddiv" >
             <p className='headtxt'>Sign in using</p>
             <Socialcontainer>
@@ -66,11 +106,11 @@ function App() {
               <button className='scocialimgbtn socialmicrosoft moreIcon'><a href="/"><span className="icontxt"><FaApple className='socialappleicon socialiconsall' /><span className='socialiconstext'>&ensp;Sign in with apple</span></span></a></button>
             </Socialcontainer>
             <br />
-          <button type='button' className='signinbtn' onClick={()=>{setHidden(true)}} >Signin with Hilife.AI</button>
+          <button type='button' className='signinbtn'>Signin with Hilife.AI</button>
        
-          </div>)
+          </div>
           
-        }
+        
             <br />
           </form> 
         </Centerdiv>

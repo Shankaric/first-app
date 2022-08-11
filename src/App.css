@@ -11,9 +11,10 @@
 }
 
 body{
+  
   font-family: 'Uchen', serif;
   /* overflow: hidden; */
-   background-image: url('./images/mainbgd.jpg');
+   /* background-image: url('./images/mainbgd.jpg'); */
 }
 ::-webkit-scrollbar { display: none; }
 input{
@@ -30,7 +31,116 @@ input{
 ::-webkit-input-placeholder{
   color: rgba(128, 128, 128, 0.483);
 }
-.loginbtn{
+.sampleInputone{
+  position: relative;
+}
+.fonteye{
+  position: absolute;
+    margin-left: -26px !important;
+    margin-top: 10px !important;
+  
+}
+.fonteyeone{
+  padding: 5px;
+  position: absolute;
+  font-size: 12px;
+  margin-left: -60px !important;
+  margin-top: 7px !important;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+}
+
+.loginbtn {
+ 
+  color: white;
+  position: absolute;
+  transition: opacity 300ms;
+  user-select: none;
+  -moz-user-select: none;
+}
+
+
+.btncontainer {
+  align-items: center;
+  background: #159AFF;
+  border-radius: 4px;
+  box-shadow: 0px 5px 18px #d5cbcb00;
+  display: flex;
+  height: 40px;
+  margin-top:20px;
+  margin-bottom:10px;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+.active .loader{
+    -webkit-animation: spin 0.6s linear; /* Safari */
+  position:absolute;
+  animation: spin 0.6s linear;
+   border: 6px solid grey;
+  border-radius: 50%;
+  border-top: 6px solid white;
+  width: 25px;
+  height: 25px;
+
+}
+.text {
+  color: white;
+  position: absolute;
+  transition: opacity 300ms;
+  user-select: none;
+  -moz-user-select: none;
+}
+
+
+.active .text {
+  opacity: 0;
+  animation: 6s Text forwards;
+}
+
+
+.btncontainer.active  {
+  border-radius: 40px !important;
+  margin: 20px AUTO;
+  -webkit-animation: spin 2s linear; 
+  color:white;
+  animation: spin 2s linear;
+  animation: 6s btncontainer;
+}
+.loginbtn .active  {
+  opacity: 0;
+  animation: 6s Text forwards;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes btncontainer {
+  0% { width: 100% }
+  6% { width: 40px }
+  71% { transform: scale(1); }
+  75% { transform: scale(1.2); }
+  77% { transform: scale(1); }
+
+  94% { width: 40px }
+  100% { width: 100% }
+}
+@keyframes Text {
+  0% { opacity: 1; transform: scale(1); }
+  6% { opacity: 0; transform: scale(0.5); }
+
+  94% { opacity: 0; transform: scale(0.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.signinBtn{
   color:white;
   padding: 10px;
   margin:20px 0px;
@@ -42,6 +152,20 @@ input{
   font-size:15px;
   cursor: pointer;
 }
+.sendotp{
+
+  color: #159AFF;
+  text-decoration: none;
+  float: left;
+}
+.forgptpassword{
+  color: #159AFF;
+  text-decoration: none;
+  position: absolute;
+  float: right;
+
+}
+
 .forms{
   color: black;
   align-items: center;
