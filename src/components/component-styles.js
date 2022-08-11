@@ -80,3 +80,10 @@ text-align:center;
 align-items:center;
 justify-content:center;
 `
+export const ImportContainer=styled.div`
+width:100%
+background-color:white;
+border-top: 4px solid #3595f6;
+height:max-content;
+
+`
