@@ -85,5 +85,6 @@ width:100%
 background-color:white;
 border-top: 4px solid #3595f6;
 height:max-content;
-
+margin :20px;
+border-radius:10px;
 `
