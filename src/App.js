@@ -1,7 +1,9 @@
 import React from 'react';
 // import $ from 'jquery';
-import ImportProducts from './components/import-products';
 import './App.css';
+import ImportProducts from './components/import-products';
+
+
 // import mainlogo from './images/mainlogo.png'
 // import google from './images/ICONS/GOOGLE.png'
 // import microsoft from './images/ICONS/MICROSOFT.png'
@@ -128,7 +130,9 @@ function App() {
    
 
   //   </div>
-<ImportProducts></ImportProducts>
+<ImportProducts>
+
+</ImportProducts>
   );
   
 

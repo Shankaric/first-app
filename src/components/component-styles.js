@@ -81,10 +81,11 @@ align-items:center;
 justify-content:center;
 `
 export const ImportContainer=styled.div`
-width:100%
-background-color:white;
+
+background-color:white !important;
 border-top: 4px solid #3595f6;
 height:max-content;
-margin :20px;
 border-radius:10px;
+padding:20px;
+box-shadow:5px 8px #0000000f; 
 `

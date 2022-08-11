@@ -11,7 +11,7 @@
 }
 
 body{
-  
+  background: #f5f7fc !important;
   font-family: 'Uchen', serif;
   /* overflow: hidden; */
    /* background-image: url('./images/mainbgd.jpg'); */
@@ -428,4 +428,13 @@ input{
   to {
     transform: rotate(360deg);
   }
+}
+/* import-products-container */
+
+.import-products-container{
+  margin: 20px;
+}
+.inputfile{
+  background: none;
+  border: none;
 }

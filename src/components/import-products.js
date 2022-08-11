@@ -1,25 +1,33 @@
 import React from 'react';
-import { Grid } from '@mui/material';
+import { Button, Grid } from '@mui/material';
 import {ImportContainer} from './component-styles'
-
+import { FaDownload } from 'react-icons/fa';
+import {CustomizedTables} from './CustomizedTables'
 
 function ImportProducts() {
  
     return (
+        <div className='import-products-container'>
         <ImportContainer>
-            <h6>File to import</h6>
+            <h3>File to import</h3>
             
             <Grid container spacing={2}>
-                <Grid item xs={6} md={8}>
-                    <input type="file" />
+                <Grid item md={8}>
+                    <input type="file" className='inputfile'/>
                 </Grid>
-                <Grid item xs={6} md={4}>
-                    <button></button>
-                </Grid>
-            
+                <Grid item md={4}>
+                    <Button variant="contained" color="primary">Submit</Button>
+                </Grid>   
             </Grid>
-        </ImportContainer>
-
+            <br /><br />    
+            <Button variant="contained" color="success"><FaDownload/>&ensp;Download template file</Button>
+            
+        </ImportContainer><br />
+    <ImportContainer>
+            
+    <CustomizedTables></CustomizedTables>
+    </ImportContainer>
+    </div>
     );
     
 }
