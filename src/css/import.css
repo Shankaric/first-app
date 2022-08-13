@@ -1,0 +1,47 @@
+@media (max-width:660px){
+    body{
+
+       overflow: visible !important;
+    }
+}
+.importbody{
+    background-color: #f5f7fc  !important;
+}
+.css-1wvnaxz-MuiTableCell-root.MuiTableCell-head{
+    font-weight: bolder;
+    background: rgba(0, 0, 0, 0.04) !important;
+    color: #384460 !important;
+}
+.importheadtext{
+   font-size: 17px !important;
+}
+.firstcolumn{
+    width: 150px !important;
+}
+.secondcolumn{
+    width: 270px !important;
+}
+.MuiTableRow-root {
+   max-height: 20px !important;
+}
+.importsubheadtext{
+    margin:0;
+}
+tr{
+    height: 10px;
+    max-height: 10px !important;
+}
+.importTabledata{
+    font-size: 16px;
+    color: #0b1e4c !important;
+}
+.importTableBoldText{
+    font-size: small;
+    font-weight: bolder;
+}
+.ImporTHeaderText{
+    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: #384460 !important;
+}

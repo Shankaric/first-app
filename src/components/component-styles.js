@@ -4,7 +4,7 @@ export const Container=styled.div`
 
 display: flex;
 padding:10px;
-width: 65%;
+width: 890px;
 margin: 0 auto;
 margin-top:50px;
 gap:10px;
@@ -83,9 +83,9 @@ justify-content:center;
 export const ImportContainer=styled.div`
 
 background-color:white !important;
-border-top: 4px solid #3595f6;
+border-top: 4px solid #3c8dbc;
 height:max-content;
-border-radius:10px;
+border-radius:5px;
 padding:20px;
-box-shadow:5px 8px #0000000f; 
+box-shadow:0 0 2rem 0 rgba(136,152,170,.15)!important;
 `
