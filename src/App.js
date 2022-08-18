@@ -2,7 +2,7 @@ import React from 'react';
 // import $ from 'jquery';
 import './App.css';
 // import ImportProducts from './components/import-products';
-import Importcontacts from './components/import-contacts';
+// import Importcontacts from './components/import-contacts';
 
 // import mainlogo from './images/mainlogo.png'
 // import google from './images/ICONS/GOOGLE.png'
@@ -10,6 +10,8 @@ import Importcontacts from './components/import-contacts';
 // import { Container, Centerdiv, Socialcontainer } from './components/component-styles';
 // import { FaApple, FaLinkedin, FaTwitter, FaFacebook, FaEllipsisH, FaHeart, FaEyeSlash } from 'react-icons/fa';
 // import CarouselComponent from "./components/carousel-component";
+import Units from './components/Units';
+import Variations from './components/Variations'
 
 
 function App() {
@@ -130,8 +132,11 @@ function App() {
    
 
   //   </div>
+<>
 
-<Importcontacts></Importcontacts>
+<Units></Units>
+{/* <Variations></Variations> */}
+</>
 );
   
 

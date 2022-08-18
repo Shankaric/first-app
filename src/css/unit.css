@@ -1,0 +1,70 @@
+
+.unitbody{
+    background-color: aliceblue !important;
+}
+.UnitHeaderText{
+    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    color: #384460 !important;
+}
+.UnitSubHeaderText{
+    font-size: 15px;
+    display: inline-block;
+    padding-left: 4px;
+    font-weight: 300;
+    line-height: 1;
+    color: #777;
+}
+.boxheadertxt{
+    font-family: 'Source Sans Pro',sans-serif;
+    font-size: 18px;
+    margin: 0;
+    line-height: 1;
+    color: #32325d !important;
+}
+
+.boxAddButton{
+    float: right !important;
+}
+.exportBtnText{
+    border-radius: 2px !important;
+    padding: 0;
+    border:1px solid #ddd !important;
+    background-color: #f4f4f4 !important;
+    color: #444 !important;
+    font-size: 9px !important;
+}
+.mui-datatables-11mde6h-MuiPaper-root{
+    box-shadow:none;
+
+    width: 80%;
+}
+#example{
+    margin:10px 0px !important;
+}
+.modalclosebtn{
+    border-radius: 2px !important;
+    padding: 0;
+    border:1px solid #ddd !important;
+    background-color: #f4f4f4 !important;
+    color: #444 !important;
+   
+}
+
+
+/* table */
+
+.dataTables_length{
+    margin: 10px 0px !important;  
+}
+.css-15wwp11-MuiTableHead-root{
+    box-shadow:0 0 0.2em #44444457 !important;
+}
+
+.css-11xur9t-MuiPaper-root-MuiTableContainer-root{
+    box-shadow: none !important;
+}
+table.dataTable.no-footer{
+    border: none !important;
+}

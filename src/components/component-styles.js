@@ -86,6 +86,6 @@ background-color:white !important;
 border-top: 4px solid #3c8dbc;
 height:max-content;
 border-radius:5px;
-padding:20px;
-box-shadow:0 0 2rem 0 rgba(136,152,170,.15)!important;
+padding:30px;
+box-shadow:0 2rem 2rem 0 rgba(136,152,170,.15),0 0 2rem 0 rgba(136,152,170,.15)!important;
 `

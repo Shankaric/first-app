@@ -1,4 +1,4 @@
-import React {useEffect} from 'react';
+import React, {useEffect} from 'react';
 import { Button, Grid } from '@mui/material';
 import {ImportContainer} from './component-styles'
 import { FaDownload } from 'react-icons/fa';
