@@ -1,10 +1,6 @@
 import React,{useEffect, useState} from 'react';
-import '../css/unit.css';
-import {ImportContainer} from './component-styles'
-import { Button, Grid } from '@mui/material';
-// import UnitTable  from "./UnitTable";
-// import Importcontacts from '../components/import-contacts';
-// import { Input } from '@mui/material';
+import { Button, Grid ,Typography } from '@mui/material';
+
 // dialogbox
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
@@ -14,27 +10,39 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
-// import Typography from '@mui/material/Typography';
+
 // inputfield
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
+
 // checkbox
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
+
 // animation
 import Zoom from '@mui/material/Zoom';
-// import Stack from '@mui/material/Stack';
-// import Slide from '@mui/material/Slide';
-// Datatable
-// import DataTable from './CDBDataTable'
-import UnitsTablestriped from './UnitsTablestriped'
+
+//Table
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell, { tableCellClasses } from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+import {FaEdit,FaTrash,FaFileExcel,FaPrint,FaFilePdf} from 'react-icons/fa'
+
 //jquery
 import 'jquery/dist/jquery.min.js';
-import "datatables.net-dt/js/dataTables.dataTables"
-import "datatables.net-dt/css/jquery.dataTables.min.css"
+import "datatables.net-dt/js/dataTables.dataTables";
+import "datatables.net-dt/css/jquery.dataTables.min.css";
 import $ from 'jquery';
+
+//Style
+import {ProductStyle} from '../ProductStyle';
+
 
 // TABLE THEME
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
@@ -115,23 +123,54 @@ const BootstrapDialogTitle = (props) => {
     );
   };
   
+ //modal
   BootstrapDialogTitle.propTypes = {
     children: PropTypes.node,
     onClose: PropTypes.func.isRequired,
   };
+  const StyledTableCell = styled(TableCell)(({ theme }) => ({
+    [`&.${tableCellClasses.head}`]: {
+      backgroundColor: theme.palette.common.white,
+      color: theme.palette.common.black,
+     
+    },
+    [`&.${tableCellClasses.body}`]: {
+      fontSize: 14,
+    },
+  }));
+  
+  const StyledTableRow = styled(TableRow)(({ theme }) => ({
+    '&:nth-of-type(odd)': {
+      backgroundColor: theme.palette.action.hover,
+    },
+    // hide last border
+    '&:last-child td, &:last-child th': {
+      border: 0,
+    },
+  }));
 
-//  modal 
-function Units(){
+ 
+function Variations(){
+  
   const [hidden, setHidden] = useState(true);
-    const [open, setOpen] = useState(false);
 
-    const handleClickOpen = () => {
-      setOpen(true);
-    };
-    const handleClose = () => {
-      setOpen(false);
-    };
+//Add modal
+  const [open, setOpen] = useState(false);
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
+//Edit modal
+  const [editopen, seteditOpen] = useState(false);
+  const edithandleClickOpen = () => {
+    seteditOpen(true);
+  };
+  const edithandleClose = () => {
+    seteditOpen(false);
+  };
 
     useEffect(() => {
         document.body.classList.add('unitbody');
@@ -144,33 +183,30 @@ function Units(){
       setCurrency(event.target.value);
     };
   
-  
+ return(
 
-
-    return(
-        <div className='import-products-container'>
-          <p className="UnitHeaderText">Units <span className="UnitSubHeaderText">Manage your units</span></p>
-            <ImportContainer>
+        <Box sx={ProductStyle.importProductsContainer}>
+          <Typography  sx={ProductStyle.UnitHeaderText}>Variations <Typography  sx={ProductStyle.UnitSubHeaderText}>Manage your Variations</Typography></Typography>
+            <Box sx={ProductStyle.ProductContainer}>
             <Grid container spacing={2}>
                   <Grid item xs={8}>
-                      <p className="boxheadertxt">All your units</p>
+                      <Typography  sx={ProductStyle.boxheadertxt}>All Variations</Typography>
                   </Grid>
                   <Grid item xs={4}>
-                      <Button variant="contained" onClick={handleClickOpen} className="boxAddButton" color="primary">Add</Button>
+                      <Button variant="contained" onClick={handleClickOpen} sx={ProductStyle.boxAddButton} color="primary">Add</Button>
                   </Grid>
                     
               </Grid>
                     <Grid container spacing={2}>
                         <Grid item xs={3}>
-                            <p className=""></p>
+                            <Typography  className=""></Typography>
                         </Grid>
                         <Grid item xs={7}>
                         <>
-                            <Button variant="outlined" size="small" className="exportBtnText">Export to csv</Button>
-                            <Button variant="outlined" size="small"className="exportBtnText">Export to Excel</Button>
-                            <Button variant="outlined" size="small" className="exportBtnText">Print</Button>
-                            <Button variant="outlined" size="small" className="exportBtnText">Column visibility</Button>
-                            <Button variant="outlined" size="small" className="exportBtnText">Export to PDF</Button>
+                            <Button variant="outlined" sx={ProductStyle.exportBtnText}>&ensp;<FaFileExcel/>Export to csv&ensp;</Button>
+                            <Button variant="outlined" sx={ProductStyle.exportBtnText}>&ensp;<FaFileExcel/>Export to Excel&ensp;</Button>
+                            <Button variant="outlined" sx={ProductStyle.exportBtnText}>&ensp;<FaPrint/>Print&ensp;</Button>
+                            <Button variant="outlined" sx={ProductStyle.exportBtnText}>&ensp;<FaFilePdf/>Export to PDF&ensp;</Button>
                         </>
                         </Grid>
                         <Grid item xs={2}>
@@ -178,17 +214,38 @@ function Units(){
                         </Grid>
                     </Grid>
                     <br />
-                    <div className="tablecontainer">
-                    <UnitsTablestriped></UnitsTablestriped>
-                    </div>
-            </ImportContainer>
-            <div>
+                    <Box>
+                    <TableContainer component={Paper} sx={ProductStyle.tablecontainer}>
+                      <Table sx={{ minWidth: 700 }} aria-label="customized table" id="example">
+                        <TableHead>
+                          <TableRow>
+                            <StyledTableCell>Variations</StyledTableCell>
+                            <StyledTableCell align="left">Values</StyledTableCell>
+                            <StyledTableCell align="left">Action</StyledTableCell>
+                          </TableRow>
+                        </TableHead>
+                        <TableBody>
+                           <StyledTableRow>
+                              <StyledTableCell component="th" scope="row"> Pieces </StyledTableCell>
+                              <StyledTableCell align="left">Pc(s)</StyledTableCell>
+                              <StyledTableCell align="left">                        
+                                <Button variant="contained" onClick={edithandleClickOpen} size="small" sx={{ textTransform: 'Capitalize'}}><FaEdit></FaEdit>&ensp;Edit</Button>&ensp;
+                                <Button variant="contained" color="error" size="small" sx={{ textTransform: 'Capitalize'}}><FaTrash></FaTrash>&ensp;Delete</Button>
+                              </StyledTableCell>
+                            </StyledTableRow>
+                        </TableBody>
+                      </Table>
+                    </TableContainer>
+
+                    </Box>
+            </Box>
            
+      {/* Addmodal      */}
       <BootstrapDialog PaperProps={{
-              style: {
-                borderRadius:"10px"
-              }
-            }}
+  style: {
+    borderRadius:"10px"
+  }
+ }}
         onClose={handleClose}
         open={open}
         TransitionComponent={Transition}
@@ -196,7 +253,7 @@ function Units(){
         aria-describedby="alert-dialog-slide-description"
       >
         <BootstrapDialogTitle id="customized-dialog-title" onClose={handleClose}>
-          Add Unit
+          Add Variations
         </BootstrapDialogTitle>
         <DialogContent dividers>
         <Box
@@ -208,6 +265,54 @@ function Units(){
       autoComplete="off"
     >
       <div>
+        <TextField
+          required
+          id="outlined-required"
+          label="Variation Name:"
+          size="small"
+        />
+        
+<ToDoListall></ToDoListall>
+              </div>
+     
+    
+    </Box>
+        </DialogContent>
+        <DialogActions>
+          <Button variant="contained" autoFocus onClick={handleClose}>
+            Save
+          </Button>
+          <Button  variant="outlined" className="modalclosebtn" autoFocus onClick={handleClose}>
+            Close
+          </Button>
+        </DialogActions>
+      </BootstrapDialog>
+        
+  {/* Editmodal      */}
+  <BootstrapDialog PaperProps={{
+              style: {
+                borderRadius:"10px"
+              }
+            }}
+        onClose={edithandleClose}
+        open={editopen}
+        TransitionComponent={Transition}
+        keepMounted
+        aria-describedby="alert-dialog-slide-description"
+      >
+        <BootstrapDialogTitle id="customized-dialog-title" onClose={edithandleClose}>
+          Edit Unit
+        </BootstrapDialogTitle>
+        <DialogContent dividers>
+        <Box
+      component="form"
+      sx={{
+        '& .MuiTextField-root': { m: 1, maxWidth: '95%', minWidth:'95%',width:'400px' },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+
         <TextField
           required
           id="outlined-required"
@@ -237,7 +342,7 @@ function Units(){
             </MenuItem>
           ))}
         </TextField>
-      </div>
+    
       <FormGroup>
       <FormControlLabel onClick={() => setHidden(s => !s)} control={<Checkbox  />} label="Add as multiple of other unit " />
     </FormGroup><br />
@@ -274,26 +379,23 @@ function Units(){
         </Grid>
       </Grid>
           : null }
+  
     </Box>
         </DialogContent>
         <DialogActions>
-          <Button variant="contained" autoFocus onClick={handleClose}>
+          <Button variant="contained" autoFocus onClick={edithandleClose}>
             Save
           </Button>
-          <Button  variant="outlined" className="modalclosebtn" autoFocus onClick={handleClose}>
+          <Button  variant="outlined" sx={ProductStyle.modalclosebtn} autoFocus onClick={edithandleClose}>
             Close
           </Button>
         </DialogActions>
       </BootstrapDialog>
-     
-    </div>
- 
-        
+
+        </Box>
 
 
-        </div>
-    );
-              
-}
-export default Units;
+ );
+              }
+export default Variations;
 

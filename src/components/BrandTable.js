@@ -7,9 +7,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { Button } from '@mui/material';
-import {FaEdit,FaTrash} from 'react-icons/fa';
-
+import {Button} from '@mui/material';
+import {FaEdit,FaTrash} from 'react-icons/fa'
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -40,28 +39,27 @@ const rows = [
  
 ];
 
-export default function VariationTablestriped() {
+export default function UnitsTablestriped() {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 700 }} aria-label="customized table" id="example1">
+      <Table sx={{ minWidth: 700 }} aria-label="customized table" id="BrandTable">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Variations</StyledTableCell>
-            <StyledTableCell align="left">Values</StyledTableCell>
+            <StyledTableCell>Brands:</StyledTableCell>
+            <StyledTableCell align="left">Note</StyledTableCell>
             <StyledTableCell align="left">Action</StyledTableCell>
-    
           </TableRow>
         </TableHead>
         <TableBody>
                <StyledTableRow>
-              <StyledTableCell component="th" scope="row"> test </StyledTableCell>
-              <StyledTableCell align="left">one</StyledTableCell>
-               <StyledTableCell align="left">
+              <StyledTableCell component="th" scope="row"> Pieces </StyledTableCell>
+              <StyledTableCell align="left"></StyledTableCell>
+              <StyledTableCell align="left">
                 
               <Button variant="contained" size="small" sx={{ textTransform: 'Capitalize'}}><FaEdit></FaEdit>&ensp;Edit</Button>&ensp;
               <Button variant="contained" color="error" size="small" sx={{ textTransform: 'Capitalize'}}><FaTrash></FaTrash>&ensp;Delete</Button>
 
-              </StyledTableCell>  
+              </StyledTableCell>
              
             </StyledTableRow>
              

@@ -18,23 +18,60 @@ import CloseIcon from '@mui/icons-material/Close';
 // inputfield
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import MenuItem from '@mui/material/MenuItem';
-// checkbox
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
+
 // animation
 import Zoom from '@mui/material/Zoom';
 // import Stack from '@mui/material/Stack';
 // import Slide from '@mui/material/Slide';
 // Datatable
 // import DataTable from './CDBDataTable'
-import UnitsTablestriped from './UnitsTablestriped'
+// import BrandTable from './BrandTable'
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell, { tableCellClasses } from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+import {FaEdit,FaTrash} from 'react-icons/fa'
+
 //jquery
 import 'jquery/dist/jquery.min.js';
 import "datatables.net-dt/js/dataTables.dataTables"
 import "datatables.net-dt/css/jquery.dataTables.min.css"
 import $ from 'jquery';
+
+
+
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+    [`&.${tableCellClasses.head}`]: {
+      backgroundColor: theme.palette.common.white,
+      color: theme.palette.common.black,
+     
+    },
+    [`&.${tableCellClasses.body}`]: {
+      fontSize: 14,
+    },
+  }));
+  
+  const StyledTableRow = styled(TableRow)(({ theme }) => ({
+    '&:nth-of-type(odd)': {
+      backgroundColor: theme.palette.action.hover,
+    },
+    // hide last border
+    '&:last-child td, &:last-child th': {
+      border: 0,
+    },
+  }));
+  
+//   function createData(name, calories, fat, carbs, protein) {
+//     return { name, calories, fat, carbs, protein };
+//   }
+  
+//   const rows = [
+   
+//   ];
+  
 
 // TABLE THEME
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
@@ -51,38 +88,11 @@ const Transition = React.forwardRef(function Transition(props, ref) {
     return <Zoom timeout={500} ref={ref} {...props} />;
   });
 
-//  DROPDOWN 
-const currencies = [
-    {
-        value: 'Please Select',
-        label: 'Please Select',
-      },
-    {
-      value: 'Yes',
-      label: 'Yes',
-    },
-    {
-      value: 'No',
-      label: 'No',
-    },
-   
-  ];
-  const baseunit = [
-    {
-        value: 'Selece base unit',
-        label: 'Selece base unit',
-      },
-    {
-      value: 'Pieces (Pc(s))',
-      label: 'Pieces (Pc(s))',
-    },
- 
-   
-  ];
+
 //  JQUERY 
   $(document).ready(function () {
     setTimeout(function(){
-    $('#example').DataTable({
+    $('#BrandTable').DataTable({
       language: {search: '', searchPlaceholder: "Search..."},
       lengthMenu: [25, 50, 100, 200, 500, 1000],
       // overflow-X: true
@@ -121,8 +131,9 @@ const BootstrapDialogTitle = (props) => {
   };
 
 //  modal 
-function Units(){
-  const [hidden, setHidden] = useState(true);
+function Brand(){
+
+    // ADD MODAL
     const [open, setOpen] = useState(false);
 
     const handleClickOpen = () => {
@@ -131,29 +142,31 @@ function Units(){
     const handleClose = () => {
       setOpen(false);
     };
+    // EDIT MODAL
+    const [editopen, seteditOpen] = useState(false);
 
+    const edithandleClickOpen = () => {
+        seteditOpen(true);
+    };
+    const edithandleClose = () => {
+        seteditOpen(false);
+    };
 
     useEffect(() => {
         document.body.classList.add('unitbody');
     });
 
-  //  dropdown 
-    const [currency, setCurrency] = useState('');
-
-    const handleChange = (event) => {
-      setCurrency(event.target.value);
-    };
-  
+ 
   
 
 
     return(
         <div className='import-products-container'>
-          <p className="UnitHeaderText">Units <span className="UnitSubHeaderText">Manage your units</span></p>
+          <p className="UnitHeaderText">Brands <span className="UnitSubHeaderText">Manage your Brands</span></p>
             <ImportContainer>
             <Grid container spacing={2}>
                   <Grid item xs={8}>
-                      <p className="boxheadertxt">All your units</p>
+                      <p className="boxheadertxt">All your brands</p>
                   </Grid>
                   <Grid item xs={4}>
                       <Button variant="contained" onClick={handleClickOpen} className="boxAddButton" color="primary">Add</Button>
@@ -179,7 +192,32 @@ function Units(){
                     </Grid>
                     <br />
                     <div className="tablecontainer">
-                    <UnitsTablestriped></UnitsTablestriped>
+                    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 700 }} aria-label="customized table" id="BrandTable">
+        <TableHead>
+          <TableRow>
+            <StyledTableCell>Brands:</StyledTableCell>
+            <StyledTableCell align="left">Note</StyledTableCell>
+            <StyledTableCell align="left">Action</StyledTableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+               <StyledTableRow>
+              <StyledTableCell component="th" scope="row"> Pieces </StyledTableCell>
+              <StyledTableCell align="left"></StyledTableCell>
+              <StyledTableCell align="left">
+                
+              <Button variant="contained"  onClick={edithandleClickOpen} size="small" sx={{ textTransform: 'Capitalize'}}><FaEdit></FaEdit>&ensp;Edit</Button>&ensp;
+              <Button variant="contained" color="error" size="small" sx={{ textTransform: 'Capitalize'}}><FaTrash></FaTrash>&ensp;Delete</Button>
+
+              </StyledTableCell>
+             
+            </StyledTableRow>
+             
+          
+        </TableBody>
+      </Table>
+    </TableContainer>
                     </div>
             </ImportContainer>
             <div>
@@ -196,7 +234,7 @@ function Units(){
         aria-describedby="alert-dialog-slide-description"
       >
         <BootstrapDialogTitle id="customized-dialog-title" onClose={handleClose}>
-          Add Unit
+          Add Brand
         </BootstrapDialogTitle>
         <DialogContent dividers>
         <Box
@@ -211,69 +249,20 @@ function Units(){
         <TextField
           required
           id="outlined-required"
-          label="Name:"
+          label="Brand Name"
           size="small"
         />
           <TextField
           required
           id="outlined-required"
-          label="Time base unit"
+          label="Short Discription"
           size="small"
         />
 
-        <TextField
-         required
-          id="outlined-select-currency"
-          select
-          label="Allow Decimal"
-          size="small"
-          value={currency}
-          onChange={handleChange}
         
-        >
-          {currencies.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
-            </MenuItem>
-          ))}
-        </TextField>
       </div>
-      <FormGroup>
-      <FormControlLabel onClick={() => setHidden(s => !s)} control={<Checkbox  />} label="Add as multiple of other unit " />
-    </FormGroup><br />
-    {!hidden ?
-    <Grid container spacing={2}>
-        <Grid item xs={2}><br />
-        <label htmlFor="">1 Unit :</label>
-        </Grid>
-        <Grid item xs={5}>
-          <TextField
-            required
-            id="outlined-required"
-            label="Short name:"
-            size="small"
-          /> 
-        </Grid>
-        <Grid item xs={4}>
-            <TextField
-            required
-              id=""
-              select
-              label="Base Unit"
-              size="small"
-              value={baseunit}
-          
-            
-            >
-              {baseunit.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
-            </MenuItem>
-          ))}
-          </TextField>
-        </Grid>
-      </Grid>
-          : null }
+    
+      <br />
     </Box>
         </DialogContent>
         <DialogActions>
@@ -285,7 +274,58 @@ function Units(){
           </Button>
         </DialogActions>
       </BootstrapDialog>
-     
+      <BootstrapDialog PaperProps={{
+              style: {
+                borderRadius:"10px"
+              }
+            }}
+        onClose={handleClose}
+        open={editopen}
+        TransitionComponent={Transition}
+        keepMounted
+        aria-describedby="alert-dialog-slide-description"
+      >
+        <BootstrapDialogTitle id="edit-customized-dialog-title" onClose={edithandleClose}>
+          Edit Brand
+        </BootstrapDialogTitle>
+        <DialogContent dividers>
+        <Box
+      component="form"
+      sx={{
+        '& .MuiTextField-root': { m: 1, maxWidth: '95%', minWidth:'95%',width:'400px' },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+      <div>
+        <TextField
+          required
+          id="outlined-required"
+          label="Brand Name"
+          size="small"
+        />
+          <TextField
+          required
+          id="outlined-required"
+          label="Short Discription"
+          size="small"
+        />
+
+        
+      </div>
+    
+      <br />
+    </Box>
+        </DialogContent>
+        <DialogActions>
+          <Button variant="contained" autoFocus onClick={edithandleClose}>
+            Save
+          </Button>
+          <Button  variant="outlined" className="modalclosebtn" autoFocus onClick={edithandleClose}>
+            Close
+          </Button>
+        </DialogActions>
+      </BootstrapDialog>
     </div>
  
         
@@ -295,5 +335,5 @@ function Units(){
     );
               
 }
-export default Units;
+export default Brand;
 

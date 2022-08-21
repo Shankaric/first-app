@@ -28,12 +28,13 @@
     float: right !important;
 }
 .exportBtnText{
-    border-radius: 2px !important;
+    border-radius: 3px !important;
     padding: 0;
     border:1px solid #ddd !important;
-    background-color: #f4f4f4 !important;
-    color: #444 !important;
-    font-size: 9px !important;
+    background-color: #FBF2FF !important;
+    color: #7009AB !important;
+     margin:1px;
+
 }
 .mui-datatables-11mde6h-MuiPaper-root{
     box-shadow:none;

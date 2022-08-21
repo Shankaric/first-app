@@ -10,8 +10,15 @@ import './App.css';
 // import { Container, Centerdiv, Socialcontainer } from './components/component-styles';
 // import { FaApple, FaLinkedin, FaTwitter, FaFacebook, FaEllipsisH, FaHeart, FaEyeSlash } from 'react-icons/fa';
 // import CarouselComponent from "./components/carousel-component";
-import Units from './components/Units';
-import Variations from './components/Variations'
+// import Units from './components/Units';
+// import Unit from './components/Product/Unit/Unit';
+import Variations from './components/Product/Variations/Variations';
+
+// import Brand from './components/Brand';Categories
+// import Variations from './components/Variations'
+// import Categories from './components/Categories';
+// import Warranties from './components/Warranties';
+// import Coustomergroups from './components/Coustomergroups';
 
 
 function App() {
@@ -68,15 +75,15 @@ function App() {
   //                 <p className='subheadtxt'>to access POS home</p>
   //                 <input type="text" className='email' placeholder='Enter your email' />
                  
-  //                 <div className="pasworddiv">
-  //                 <br />
-  //                 <span ><input type="text" name="sampleInputone" placeholder='Enter your Password'/><FaEyeSlash className='fonteye' /></span>
-  //                 <button className='signinBtn'>Signin</button>
-  //                 <div className="otplinks">
-  //                   <a href="/" className='sendotp'>sign in using OTP</a>
-  //                   <a href="/" className='forgptpassword'>Forgot Password?</a>
-  //                 </div>
-  //                 </div>
+                  // <div className="pasworddiv">
+                  // <br />
+                  // <span ><input type="text" name="sampleInputone" placeholder='Enter your Password'/><FaEyeSlash className='fonteye' /></span>
+                  // <button className='signinBtn'>Signin</button>
+                  // <div className="otplinks">
+                  //   <a href="/" className='sendotp'>sign in using OTP</a>
+                  //   <a href="/" className='forgptpassword'>Forgot Password?</a>
+                  // </div>
+                  // </div>
   //                 <div className="btncontainer" onClick="this.classList.toggle('active')">
   //                     <span className="text">LOGIN</span>
   //                   <span className='loader'></span>
@@ -134,8 +141,13 @@ function App() {
   //   </div>
 <>
 
-<Units></Units>
-{/* <Variations></Variations> */}
+{/* <Units></Units> */}
+{/* <Brand></Brand> */}
+{/* <Categories></Categories> */}
+{/* <Warranties></Warranties> */}
+{/* <Coustomergroups></Coustomergroups> */}
+{/* <Unit></Unit> */}
+<Variations></Variations>
 </>
 );
   

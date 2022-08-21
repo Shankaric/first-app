@@ -438,3 +438,44 @@ input{
   background: none;
   border: none;
 }
+/* todolist */
+.todoLlistUl{
+padding:0px 16px !important;
+
+}
+
+.MuiGrid-root .MuiGrid-container{
+  height: 35px !important;
+
+}
+#example1_wrapper{
+  margin: 20px;
+}
+.dataTables_wrapper .dataTables_filter{
+  margin: 20px; 
+}
+.dataTables_info{
+  margin:20px;
+}
+.dataTables_paginate{
+  margin:20px;
+}
+.css-11qr2p8-MuiButtonBase-root-MuiButton-root{
+  max-width: 20px !important;
+    width: 10px !important;
+    min-width: 39px !important;
+    margin-top: 10px !important;
+}
+.css-3wxg0j-MuiButtonBase-root-MuiButton-root{
+  max-width: 20px !important;
+  width: 10px !important;
+  min-width: 39px !important;
+ 
+}
+.css-mhc70k-MuiGrid-root{
+  margin-left: 0 !important;
+  margin-top:-31px !important;
+}
+.todo{
+  margin-top:10px !important;
+}
