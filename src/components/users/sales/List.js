@@ -62,6 +62,14 @@ const Transition = React.forwardRef(function Transition(props, ref) {
      } ,1000);
 });
 
+  // ****** Table Data ****** //
+  function createData(name, email, contact_number, address, sales_comm, action) {
+    return { name, email, contact_number, address, sales_comm, action };
+}
+
+const rows = [
+    createData('sample', 'admin@gmail.com', '2453245', 'sample', 52),
+];
 
 
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -123,24 +131,36 @@ function SalesAgentlist(){
                       <Table sx={{ minWidth: 700 }} aria-label="customized table" id="salesagenttable">
                         <TableHead>
                           <TableRow>
-                            <StyledTableCell>Name:</StyledTableCell>
-                            <StyledTableCell align="left">Short name</StyledTableCell>
-                            <StyledTableCell align="left">Allow decimal</StyledTableCell>
-                            <StyledTableCell align="left">Action</StyledTableCell>
+                                <StyledTableCell>Name</StyledTableCell>
+                                <StyledTableCell >Email</StyledTableCell>
+                                <StyledTableCell >Contact Number</StyledTableCell>
+                                <StyledTableCell >Address</StyledTableCell>
+                                <StyledTableCell >Sales Commission Percentage&ensp;(%)</StyledTableCell>
+                                <StyledTableCell >Action</StyledTableCell>
                           </TableRow>
                         </TableHead>
-                        <TableBody>
-                           <StyledTableRow>
-                              <StyledTableCell component="th" scope="row"> Pieces </StyledTableCell>
-                              <StyledTableCell align="left">Pc(s)</StyledTableCell>
-                              <StyledTableCell align="left">No</StyledTableCell>
-                              <StyledTableCell align="left"> 
-                                    <Salesedit />
-                                    <Button sx={userStyle.button_view}><FaEye />&ensp;View</Button>
-                                    <Button sx={userStyle.button_delete}><FaTrash />&ensp;Delete</Button>
-                        
-                              </StyledTableCell>
-                            </StyledTableRow>
+                        <TableBody align="left">
+                            {rows.map((row) => (
+                                <StyledTableRow
+                                    key={row.name}
+                                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                >
+                                    <StyledTableCell component="th" scope="row">
+                                        {row.name}
+                                    </StyledTableCell>
+                                    <StyledTableCell >{row.email}</StyledTableCell>
+                                    <StyledTableCell >{row.contact_number}</StyledTableCell>
+                                    <StyledTableCell >{row.address}</StyledTableCell>
+                                    <StyledTableCell>{row.sales_comm}</StyledTableCell>
+                                    <StyledTableCell >
+                                        <Grid>
+                                            <Salesedit />
+                                            <Button sx={userStyle.button_view}><FaEye />&ensp;View</Button>
+                                            <Button sx={userStyle.button_delete}><FaTrash />&ensp;Delete</Button>
+                                        </Grid>
+                                    </StyledTableCell>
+                                </StyledTableRow>
+                            ))}
                         </TableBody>
                       </Table>
                     </TableContainer>
