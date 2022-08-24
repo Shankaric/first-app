@@ -1,12 +1,7 @@
 export const ProductStyle = {
+
     ProductContainer:{
-        // backgroundColor:"white !important",
-        // borderTop:" 4px solid #3c8dbc",
-        // height:"max-content",
-        // borderRadius:"5px",
-        // padding:"30px",
-        // boxShadow:"0 2rem 2rem 0 rgba(136,152,170,.15),0 0 2rem 0 rgba(136,152,170,.15)!important",
-        bgcolor: '#fff',
+         bgcolor: '#fff',
         height: 'max-content',
         borderTop: '5px solid #7009AB;',
         borderRadius: '10px',
@@ -37,8 +32,38 @@ export const ProductStyle = {
         color:" #32325d !important",
     },
     boxAddButton:{
+        backgroundColor: '#7009AB !important',
+        color: '#A5BECC',
+        marginRight: '5px !important',
+        height: '40px !important',
+        padding: '10px !important',
+        fontWeight: '600 !important',
+        borderRadius: '7px !important',
+        float: 'right !important',
+        border: '0px !important',
+        '&:hover' : {
+            backgroundColor: '#fff !important',
+            border: '1px solid #7009AB !important',
+            color: '#A5BECC !important',
         float:" right !important",
     },
+},
+modalsavebtn:{
+    backgroundColor: '#7009AB !important',
+    color: '#A5BECC',
+    marginRight: '5px !important',
+    height: '40px !important',
+    padding: '10px !important',
+    fontWeight: '600 !important',
+    borderRadius: '7px !important',
+    float: 'right !important',
+    border: '0px !important',
+    '&:hover' : {
+        backgroundColor: '#fff !important',
+        border: '1px solid #7009AB !important',
+        color: '#A5BECC !important',
+    },
+},
     exportBtnText:{
         borderRadius:" 3px !important",
         padding: "0",
@@ -57,5 +82,43 @@ export const ProductStyle = {
     },
     tablecontainer:{
         boxShadow:'none !important',
-    }
+    },
+    ImportContainer:{
+
+    backgroundColor:'white !important',
+    borderTop: '5px solid #7009AB;',
+    height:'max-content',
+    borderRadius:'5px',
+    padding:'30px',
+    margin:'0px 20px',
+    boxShadow: '6px 6px 6px 9px #dedbdbae',
+
+    },
+    importheadtext:{
+        fontSize:'20px !important',
+    },
+    importsubheadtext:{
+        margin:'0',
+    },
+    importTabledata:{
+        fontSize: '14px',
+        color: '#0b1e4c !important',
+    },
+    importTableBoldText:{
+        fontSize: 'small',
+        fontWeight: 'bolder',
+    },
+    tableHead:{
+        backgroundColor:"#f9f9f9 !important",
+        color:'#525f7f !important',
+        fontWeight:'bold',
+        fontSize:'15px',
+    },
+    ImporTHeaderText:{
+        fontFamily:" 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif",
+        fontSize: '23px !important',
+        fontWeight: '400',
+        color: '#384460 !important',
+        marginLeft:'15px',
+    },
 }

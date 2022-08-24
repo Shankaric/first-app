@@ -1,7 +1,9 @@
 import React from 'react';
 // import $ from 'jquery';
-import './App.css';
-// import ImportProducts from './components/import-products';
+// import './App.css';
+// import ImportProductsFinal from './components/Product/ImportProductsFinal';
+// import ImportContactFinal from './components/Product/ImportContactFinal';
+
 // import Importcontacts from './components/import-contacts';
 
 // import mainlogo from './images/mainlogo.png'
@@ -12,13 +14,36 @@ import './App.css';
 // import CarouselComponent from "./components/carousel-component";
 // import Units from './components/Units';
 // import Unit from './components/Product/Unit/Unit';
-import Variations from './components/Product/Variations/Variations';
+// import Variations from './components/Product/Variations/Variations';
+// import Warranties from './components/Product/Warranties/Warranties';
+// import Brand from './components/Product/Brand/Brand'; 
+// import Categories from './components/Product/Categories/Categories';
+// import CustomerGroups from './components/Product/CustomerGroups/CustomerGroup';
+//  import ImportOpeningStock from './components/Product/ImportOpeningStock/ImportOpeningStock';
 
-// import Brand from './components/Brand';Categories
+// Report MODULE
+// import ProfitLoss from './components/Reports/ProfitLoss';
+
+// users module
+import Userslist from './components/users/users/List';
+import Usercreate from './components/users/users/Create'; 
+import Useredit from './components/users/users/Edit'; 
+
+// Role module
+import Roleslist from './components/users/roles/List';
+import Rolecrete from './components/users/roles/Create'; 
+import Roleedit from './components/users/roles/Edit'; 
+
+// sales module
+import SalesAgentlist from './components/users/sales/List';
+
+
+// import Brand from './components/Brand';
 // import Variations from './components/Variations'
 // import Categories from './components/Categories';
 // import Warranties from './components/Warranties';
 // import Coustomergroups from './components/Coustomergroups';
+
 
 
 function App() {
@@ -102,25 +127,25 @@ function App() {
   //               </div>
               
                 
-  //           <div className="seconddiv" >
-  //           <p className='headtxt'>Sign in using</p>
-  //           <Socialcontainer>
-  //             <button className='scocialimgbtn socialgoogle moreIcon'><a href="/"><span className="icontxt"><img src={google} alt="Google logo" className="iconimg" /><span className='googleicontxt'>&ensp;Google</span></span></a></button>
-  //             <button className='scocialimgbtn socialmicrosoft moreIcon'><a href="/"><span className="icontxt"><img src={microsoft} alt="Google logo" className="iconimg" /><span className='socialiconstext'>&ensp; Microsoft</span></span></a></button>
-  //             </Socialcontainer>
-  //             <Socialcontainer>
-  //             <button className='socialbtn sociallinkedin moreIcon'><a href="/"><span className="icontxt"><span className='socialiconstext'>&ensp;Linked</span><FaLinkedin className='socialLinkedicon socialiconsall' /></span></a></button>
-  //             <button className='socialbtn socialfacebook moreIcon'><a href="/"><span className="icontxt"><FaFacebook className='socialappleicon socialiconsall' /><span className='socialiconstext'>&ensp;Facebook</span></span></a></button>
+          //   <div className="seconddiv" >
+          //   <p className='headtxt'>Sign in using</p>
+          //   <Box>
+          //     <button className='scocialimgbtn socialgoogle moreIcon'><a href="/"><span className="icontxt"><img src={google} alt="Google logo" className="iconimg" /><span className='googleicontxt'>&ensp;Google</span></span></a></button>
+          //     <button className='scocialimgbtn socialmicrosoft moreIcon'><a href="/"><span className="icontxt"><img src={microsoft} alt="Google logo" className="iconimg" /><span className='socialiconstext'>&ensp; Microsoft</span></span></a></button>
+          //     </Box>
+          //     <Socialcontainer>
+          //     <button className='socialbtn sociallinkedin moreIcon'><a href="/"><span className="icontxt"><span className='socialiconstext'>&ensp;Linked</span><FaLinkedin className='socialLinkedicon socialiconsall' /></span></a></button>
+          //     <button className='socialbtn socialfacebook moreIcon'><a href="/"><span className="icontxt"><FaFacebook className='socialappleicon socialiconsall' /><span className='socialiconstext'>&ensp;Facebook</span></span></a></button>
 
-  //             </Socialcontainer>
-  //             <Socialcontainer>
-  //             <button className='socialbtn socialtwitter moreIcon'><a href="/"><span className="icontxt"><FaTwitter className='socialappleicon socialiconsall' /><span className='socialiconstext'>&ensp;Twitter</span></span></a></button>
-  //             <button className='scocialimgbtn socialmicrosoft moreIcon'><a href="/"><span className="icontxt"><FaApple className='socialappleicon socialiconsall' /><span className='socialiconstext'>&ensp;Sign in with apple</span></span></a></button>
-  //           </Socialcontainer>
-  //           <br />
-  //         <button type='button' className='signinbtn'>Signin with Hilife.AI</button>
+          //     </Socialcontainer>
+          //     <Socialcontainer>
+          //     <button className='socialbtn socialtwitter moreIcon'><a href="/"><span className="icontxt"><FaTwitter className='socialappleicon socialiconsall' /><span className='socialiconstext'>&ensp;Twitter</span></span></a></button>
+          //     <button className='scocialimgbtn socialmicrosoft moreIcon'><a href="/"><span className="icontxt"><FaApple className='socialappleicon socialiconsall' /><span className='socialiconstext'>&ensp;Sign in with apple</span></span></a></button>
+          //   </Socialcontainer>
+          //   <br />
+          // <button type='button' className='signinbtn'>Signin with Hilife.AI</button>
        
-  //         </div>
+          // </div>
           
         
   //           <br />
@@ -141,13 +166,29 @@ function App() {
   //   </div>
 <>
 
-{/* <Units></Units> */}
+{/* <Unit></Unit> */}
 {/* <Brand></Brand> */}
 {/* <Categories></Categories> */}
 {/* <Warranties></Warranties> */}
-{/* <Coustomergroups></Coustomergroups> */}
+{/* <ProfitLoss></ProfitLoss> */}
+{/* <ImportOpeningStock></ImportOpeningStock> */}
+{/* <Customergroups></Customergroups> */}
 {/* <Unit></Unit> */}
-<Variations></Variations>
+{/* <Variations></Variations> */}
+{/* <Warranties></Warranties> */}
+{/* <Brand></Brand> */}
+{/* <Categories ></Categories> */}
+{/* <CustomerGroups></CustomerGroups> */}
+{/* <ImportProductsFinal></ImportProductsFinal>
+<ImportContactFinal></ImportContactFinal> */}
+{/* <Userslist></Userslist> */}
+{/* <Usercreate></Usercreate> */}
+{/* <Useredit></Useredit> */}
+{/* <Roleslist></Roleslist> */}
+{/* <Rolecrete></Rolecrete> */}
+{/* <Roleedit></Roleedit> */}
+<SalesAgentlist></SalesAgentlist>
+
 </>
 );
   

@@ -20,7 +20,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import {FaTrash,FaFileExcel,FaPrint,FaFilePdf} from 'react-icons/fa'
+import {  FaEdit, FaTrash ,FaPrint,FaFilePdf,FaFileCsv} from "react-icons/fa";
+import { AiFillFileExcel } from "react-icons/ai";
 
 //jquery
 import 'jquery/dist/jquery.min.js';
@@ -29,10 +30,8 @@ import "datatables.net-dt/css/jquery.dataTables.min.css";
 import $ from 'jquery';
 
 //Style
-import {ProductStyle} from '../ProductStyle';
-
-import UnitAddModal from './Create';
-import UnitEditModal from './Edit';
+import { userStyle } from '../UserStyle';
+import { Link } from '@mui/material';
 
 
 // TABLE THEME
@@ -62,7 +61,13 @@ const Transition = React.forwardRef(function Transition(props, ref) {
      } ,1000);
 });
 
+function createData(roles, action) {
+    return {roles, action };
+}
 
+const rows = [
+    createData('sample'),
+];
 
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -97,56 +102,54 @@ function Units(){
   
  return(
 
-        <Box sx={ProductStyle.importProductsContainer}>
-          <Typography  sx={ProductStyle.UnitHeaderText}>Units <Typography  sx={ProductStyle.UnitSubHeaderText}>Manage your units</Typography></Typography>
-            <Box sx={ProductStyle.ProductContainer}>
+        <Box sx={userStyle.importProductsContainer}>
+          <Typography sx={userStyle.UnitHeaderText}>Roles <Typography  sx={userStyle.UnitSubHeaderText}>Manage Roles</Typography></Typography>
+            <Box sx={userStyle.Container}>
             <Grid container spacing={2}>
                   <Grid item xs={8}>
-                      <Typography  sx={ProductStyle.boxheadertxt}>All your units</Typography>
+                      <Typography  sx={userStyle.boxheadertxt}>All Roles</Typography>
                   </Grid>
                   <Grid item xs={4}>
-                    <UnitAddModal></UnitAddModal>
+                  <Button sx={userStyle.button_add}><Link to="/rolecreate" style={{textDecoration:'none', color: 'white'}}>Add</Link></Button>
+
                   </Grid>
                     
               </Grid>
-                    <Grid container spacing={2}>
-                        <Grid item xs={3}>
-                            <Typography  className=""></Typography>
-                        </Grid>
-                        <Grid item xs={7}>
-                        <>
-                            <Button variant="outlined" sx={ProductStyle.exportBtnText}>&ensp;<FaFileExcel/> Export to csv&ensp;</Button>
-                            <Button variant="outlined" sx={ProductStyle.exportBtnText}>&ensp;<FaFileExcel/> Export to Excel&ensp;</Button>
-                            <Button variant="outlined" sx={ProductStyle.exportBtnText}>&ensp;<FaPrint/> Print&ensp;</Button>
-                            <Button variant="outlined" sx={ProductStyle.exportBtnText}>&ensp;<FaFilePdf/> Export to PDF&ensp;</Button>
-                        </>
-                        </Grid>
-                        <Grid item xs={2}>
-                     
+                 <Grid container sx={userStyle.grid_container}>
+                        <Grid >
+                            <Button sx={userStyle.button_grp}><FaFileCsv />&ensp;Export to CSV</Button>
+                            <Button sx={userStyle.button_grp}><AiFillFileExcel />&ensp;Export to Excel</Button>
+                            <Button sx={userStyle.button_grp}><FaPrint />&ensp;Print</Button>
+                            <Button sx={userStyle.button_grp}><FaFilePdf />&ensp;Export to PDF</Button>
                         </Grid>
                     </Grid>
                     <br />
                     <Box>
-                    <TableContainer component={Paper} sx={ProductStyle.tablecontainer}>
+                    <TableContainer component={Paper} sx={userStyle.tablecontainer}>
                       <Table sx={{ minWidth: 700 }} aria-label="customized table" id="example">
                         <TableHead>
                           <TableRow>
-                            <StyledTableCell>Name:</StyledTableCell>
-                            <StyledTableCell align="left">Short name</StyledTableCell>
-                            <StyledTableCell align="left">Allow decimal</StyledTableCell>
-                            <StyledTableCell align="left">Action</StyledTableCell>
+                          <StyledTableCell  sx={{width: '600px !important'}} >Roles</StyledTableCell>                                
+                                <StyledTableCell   >Action</StyledTableCell>
                           </TableRow>
                         </TableHead>
-                        <TableBody>
-                           <StyledTableRow>
-                              <StyledTableCell component="th" scope="row"> Pieces </StyledTableCell>
-                              <StyledTableCell align="left">Pc(s)</StyledTableCell>
-                              <StyledTableCell align="left">No</StyledTableCell>
-                              <StyledTableCell align="left">    
-                              <UnitEditModal></UnitEditModal>   &ensp;                 
-                                <Button variant="contained" color="error" size="small" sx={{ textTransform: 'Capitalize'}}><FaTrash></FaTrash>&ensp;Delete</Button>
-                              </StyledTableCell>
-                            </StyledTableRow>
+                        <TableBody align="left">
+                            {rows.map((row) => (
+                                <StyledTableRow 
+                                    key={row.name}
+                                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                >
+                                    <StyledTableCell component="th" scope="row"  >
+                                        {row.roles}
+                                    </StyledTableCell>                              
+                                    <StyledTableCell >
+                                        <Grid>
+                                            <Button sx={userStyle.button_edit}><Link to="/roleedit" style={{textDecoration:'none', color:'#fff'}}><FaEdit />&ensp;Edit</Link></Button>
+                                            <Button sx={userStyle.button_delete}><FaTrash />&ensp;Delete</Button>
+                                        </Grid>
+                                    </StyledTableCell>
+                                </StyledTableRow>
+                            ))}
                         </TableBody>
                       </Table>
                     </TableContainer>

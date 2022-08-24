@@ -299,7 +299,7 @@ input{
 .signinbtn{
   width: 100%;
     text-align: center;
-    border: 2px solid #309FF4;
+    border: 2px solid #309FF4 !important;
     color: #309FF4;
     display: inline-block;
     border-radius: 22px;
