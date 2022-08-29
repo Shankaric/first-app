@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
+import { Typography } from '@mui/material';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
@@ -7,6 +8,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import {reportStyles} from './reportStyles'
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -42,9 +44,9 @@ export default function Importcontacts() {
     <TableContainer component={Paper} sx={{
          padding:1,
       width:'100%',
-      // height:400,
       margin:'auto',
       overflow:'auto',
+      boxShadow:'none',
        "&::-webkit-scrollbar":{
         width:20
       },
@@ -58,55 +60,50 @@ export default function Importcontacts() {
         <Table md={{ minWidth: 200,maxHeight:'5px',overflow: 'auto'}} aria-label="customized table">
     
         <TableBody>
-         
-            <StyledTableRow>
-                <StyledTableCell  component="th" scope="row">1</StyledTableCell>
-                <StyledTableCell align="left">Available Options:<br /> <p className="importTableBoldText">1 = Customer,<br />2 = Supplier <br />3 = Both</p></StyledTableCell>
-            
+        <StyledTableRow>
+                <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Closing stock</Typography><Typography sx={reportStyles.reportTabletxt}>(By purchase price):</Typography></StyledTableCell>
+                <StyledTableCell align="left">₹ 30.078.16</StyledTableCell>
             </StyledTableRow>
             <StyledTableRow>
-                <StyledTableCell  component="th" scope="row">2</StyledTableCell>
-                <StyledTableCell align="left"></StyledTableCell>
-            
+                <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Closing stock</Typography><Typography sx={reportStyles.reportTabletxt}>(By sale price):</Typography></StyledTableCell>
+                <StyledTableCell align="left">₹ 46,687.50</StyledTableCell>
             </StyledTableRow>
             <StyledTableRow>
-                <StyledTableCell  component="th" scope="row">3</StyledTableCell>
-                <StyledTableCell align="left"></StyledTableCell>
-            
+                <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Total purchase:</Typography><Typography sx={reportStyles.reportTabletxt}>(Exc. tax, Discount)</Typography></StyledTableCell>
+                <StyledTableCell align="left">₹ 0.00</StyledTableCell>
             </StyledTableRow>
             <StyledTableRow>
-                <StyledTableCell  component="th" scope="row">4</StyledTableCell>
-                <StyledTableCell align="left"></StyledTableCell>
+                <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Total Stock Adjustment:	</Typography></StyledTableCell>
+                <StyledTableCell align="left">₹ 0.00</StyledTableCell>
             </StyledTableRow>
             <StyledTableRow>
-                <StyledTableCell  component="th" scope="row">5</StyledTableCell>
-                <StyledTableCell align="left"></StyledTableCell>
+                <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Total Expense:	</Typography></StyledTableCell>
+                <StyledTableCell align="left">₹ 0.00</StyledTableCell>
             </StyledTableRow>
             <StyledTableRow>
-                <StyledTableCell  component="th" scope="row">6</StyledTableCell>
-                <StyledTableCell align="left"></StyledTableCell>
+                <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Total purchase shipping charge:	</Typography></StyledTableCell>
+                <StyledTableCell align="left">₹ 0.00</StyledTableCell>
             </StyledTableRow>
             <StyledTableRow>
-                <StyledTableCell  component="th" scope="row">7</StyledTableCell>
-                <StyledTableCell align="left"><p className="importTabledata">Leave blank to auto generate Contact ID</p></StyledTableCell>
+                <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Purchase additional expenses:		</Typography></StyledTableCell>
+                <StyledTableCell align="left">₹ 0.00</StyledTableCell>
             </StyledTableRow>
             <StyledTableRow>
-                <StyledTableCell  component="th" scope="row">8</StyledTableCell>
-                <StyledTableCell align="left"></StyledTableCell>
+                <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Total transfer shipping charge:		</Typography></StyledTableCell>
+                <StyledTableCell align="left">₹ 0.00</StyledTableCell>
             </StyledTableRow>
             <StyledTableRow>
-                <StyledTableCell  component="th" scope="row">9</StyledTableCell>
-                <StyledTableCell align="left"></StyledTableCell>
+                <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Total Sell discount:</Typography></StyledTableCell>
+                <StyledTableCell align="left">₹ 0.00</StyledTableCell>
             </StyledTableRow>
             <StyledTableRow>
-                <StyledTableCell  component="th" scope="row">10</StyledTableCell>
-                <StyledTableCell align="left"></StyledTableCell>
+                <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Total customer reward:	</Typography></StyledTableCell>
+                <StyledTableCell align="left">₹ 0.00</StyledTableCell>
             </StyledTableRow>
             <StyledTableRow>
-                <StyledTableCell  component="th" scope="row">11</StyledTableCell>
-                <StyledTableCell align="left"><p className="importTableBoldText">Available Options: days and months</p></StyledTableCell>
+                <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Total Sell Return:</Typography></StyledTableCell>
+                <StyledTableCell align="left">₹ 0.00</StyledTableCell>
             </StyledTableRow>
-          
         </TableBody>
       </Table>
     </TableContainer>

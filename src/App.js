@@ -21,21 +21,31 @@ import React from 'react';
 // import CustomerGroups from './components/Product/CustomerGroups/CustomerGroup';
 //  import ImportOpeningStock from './components/Product/ImportOpeningStock/ImportOpeningStock';
 
-// Report MODULE
-// import ProfitLoss from './components/Reports/ProfitLoss';
+// // Report MODULE
+import ProfitLoss from './components/Reports/ProfitLoss';
 
-// users module
-import Userslist from './components/users/users/List';
-import Usercreate from './components/users/users/Create'; 
-import Useredit from './components/users/users/Edit'; 
+// // users module
+// import Userslist from './components/users/users/List';
+// import Usercreate from './components/users/users/Create'; 
+// import Useredit from './components/users/users/Edit'; 
 
-// Role module
-import Roleslist from './components/users/roles/List';
-import Rolecrete from './components/users/roles/Create'; 
-import Roleedit from './components/users/roles/Edit'; 
+// // Role module
+// import Roleslist from './components/users/roles/List';
+// import Rolecrete from './components/users/roles/Create'; 
+// import Roleedit from './components/users/roles/Edit'; 
 
-// sales module
-import SalesAgentlist from './components/users/sales/List';
+// // sales module
+// import SalesAgentlist from './components/users/sales/List';
+
+// //contacts module
+// import Supplierlist from './components/Contacts/suppliers/List';
+// import Contactlist from './components/Contacts/customer/List';
+
+// product module
+// import Productlist from './components/Product/product/List';
+
+// Purchase Table
+  import PurchaseList from './components/Purchases/List';
 
 
 // import Brand from './components/Brand';
@@ -170,7 +180,7 @@ function App() {
 {/* <Brand></Brand> */}
 {/* <Categories></Categories> */}
 {/* <Warranties></Warranties> */}
-{/* <ProfitLoss></ProfitLoss> */}
+<ProfitLoss></ProfitLoss>
 {/* <ImportOpeningStock></ImportOpeningStock> */}
 {/* <Customergroups></Customergroups> */}
 {/* <Unit></Unit> */}
@@ -187,8 +197,11 @@ function App() {
 {/* <Roleslist></Roleslist> */}
 {/* <Rolecrete></Rolecrete> */}
 {/* <Roleedit></Roleedit> */}
-<SalesAgentlist></SalesAgentlist>
-
+{/* <SalesAgentlist></SalesAgentlist> */}
+{/* <Supplierlist></Supplierlist> */}
+{/* <Contactlist></Contactlist> */}
+{/* <Productlist></Productlist> */}
+{/* <PurchaseList></PurchaseList> */}
 </>
 );
   
