@@ -1,8 +1,23 @@
 export const reportStyles = {
     tablecontainer:{
-        margin:'20px',
-        padding:'20px',
-        backgroundColor:'white',
+           backgroundColor:'white',
+    },
+    container:{
+        backgroundColor: 'rgb(255, 255, 255)',
+        color: 'rgb(97, 97, 97)',
+        borderRadius: '5px',
+        overflow: 'hidden',
+        height: 'max-content',
+        padding:'15PX',
+
+    },
+    filtercontainer:{
+        backgroundColor: 'rgb(255, 255, 255)',
+        color: 'rgb(97, 97, 97)',
+        borderRadius: '12px',
+        overflow: 'hidden',
+        height: 'max-content',
+        boxShadow:'none !important',
     },
     reportTableBoldtxt:{
         display:'flex',
@@ -11,9 +26,29 @@ export const reportStyles = {
     reportTabletxt:{
         color:'##777',
     },
+    UnitHeaderText:{
+        fontFamily:"'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif",
+        fontSize: "23px",
+        fontWeight: "400",
+        margin:"10px 30px",
+        color: "#384460 !important",
+    },
+    UnitSubHeaderText:{
+        fontSize: "15px",
+        display: "inline-block",
+        paddingLeft: "4px",
+        fontWeight: "300",
+        lineHeight: "1",
+        color: "#777",
+    },
     footerStyle:{
-        fontSize:'20px !important',
+        fontSize:'16px !important',
         fontWeight:'600 !important',
+        textAlign:'center !important'
+    },
+    footerSmlTxtStyle:{
+        fontSize:'16  !important',
+        fontWeight:'500 !important',
     },
     button_grp : {
         backgroundColor: 'rgb(245 243 246) !important',
@@ -28,5 +63,29 @@ export const reportStyles = {
     },
     grid_container : {
         justifyContent: 'center',
+    },
+    spanInfoIcons : {
+        fontSize: '16px', 
+        paddingTop: '0px !important', 
+        paddingLeft: '1px',
+        paddingRight: '2px',
+        margin: 'auto', 
+        border: '1px solid #b97df0', 
+        width: '45px !important', 
+        height: '40px !important', 
+        backgroundColor: 'white', 
+        color: '#7009ab' ,
+    },
+    spanIcons : {
+        fontSize: '16px', 
+        paddingTop: '7px !important', 
+        paddingLeft: '11px',
+        paddingRight: '1px',
+        margin: 'auto', 
+        border: '1px solid #b97df0', 
+        width: '45px !important', 
+        height: '40px', 
+        backgroundColor: 'white', 
+        color: '#7009ab' ,
     },
 }

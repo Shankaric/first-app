@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import "./App.css";
 import { styled } from '@mui/material/styles';
-import { Box, AccordionSummary, Typography, Container, Grid, Checkbox, InputLabel, FormControl, MenuItem, Select } from '@mui/material';
+import { Box, AccordionSummary, Typography, Container, Grid, Checkbox, InputLabel, Accordion,AccordionDetails,FormControl, MenuItem, Select } from '@mui/material';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
@@ -16,23 +16,6 @@ import { DateRangePicker } from 'rsuite';
 
 
 
-const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
-
-const Accordion = styled((props) => (
-    <MuiAccordion disableGutters elevation={0} square {...props} />
-  ))(({ theme }) => ({
-    border: `1px solid ${theme.palette.divider}`,
-    '&:not(:last-child)': {
-      borderBottom: 0,
-    },
-    '&:before': {
-      display: 'none',
-    },
-  }));
-  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-    padding: theme.spacing(2),
-    borderTop: '1px solid rgba(0, 0, 0, .125)',
-  }));
 
 
 function PurchaseList() {

@@ -23,6 +23,26 @@ import React from 'react';
 
 // // Report MODULE
 import ProfitLoss from './components/Reports/ProfitLoss';
+import ProductSell from './components/Reports/ProductSell';
+import ServiceStaff from './components/Reports/ServiceStaff';
+import TableReport from './components/Reports/TableReport';
+import SalesRepresentative from './components/Reports/SalesRepresentative';
+import RegisterReport from './components/Reports/RegisterReport';
+import ExpenseReport from './components/Reports/Expense';
+import SellPayment from './components/Reports/SellPayment';
+import PurchasePayment from './components/Reports/PurchasePayment';
+import ProductPurchase from './components/Reports/ProductPurchase';
+// import PurchasesSale from './components/Reports/PurchasesSale';
+import ItemReport from './components/Reports/ItemReport';
+import TrendingProducts from './components/Reports/Trending';
+import StockAdjustment from './components/Reports/StockAdjustment';
+import StockReport from './components/Reports/StockReport';
+import CustomerGroup from './components/Reports/CustomerGroup';
+import SupplierCustomer from './components/Reports/SupplierCustomer';
+import TaxReport from './components/Reports/TaxReport';
+
+
+// import DateRange from './components/Reports/DateRange'
 
 // // users module
 // import Userslist from './components/users/users/List';
@@ -45,8 +65,8 @@ import ProfitLoss from './components/Reports/ProfitLoss';
 // import Productlist from './components/Product/product/List';
 
 // Purchase Table
-  import PurchaseList from './components/Purchases/List';
-
+  // import PurchaseList from './components/Purchases/List';
+  // import PurchaseCreate from './components/Purchases/Create';
 
 // import Brand from './components/Brand';
 // import Variations from './components/Variations'
@@ -175,12 +195,29 @@ function App() {
 
   //   </div>
 <>
-
+{/* <DateRange></DateRange> */}
 {/* <Unit></Unit> */}
 {/* <Brand></Brand> */}
 {/* <Categories></Categories> */}
 {/* <Warranties></Warranties> */}
 <ProfitLoss></ProfitLoss>
+<ProductSell></ProductSell>
+<ServiceStaff></ServiceStaff>
+{/* <TableReport></TableReport> */}
+<SalesRepresentative></SalesRepresentative>
+{/* <RegisterReport></RegisterReport> */}
+<ExpenseReport></ExpenseReport>
+<SellPayment></SellPayment>
+<PurchasePayment></PurchasePayment>
+<ProductPurchase></ProductPurchase>
+{/* <PurchasesSale></PurchasesSale> */}
+<ItemReport></ItemReport>
+<TrendingProducts></TrendingProducts>
+<StockAdjustment></StockAdjustment>
+<StockReport></StockReport>
+<CustomerGroup></CustomerGroup>
+<SupplierCustomer></SupplierCustomer>
+<TaxReport></TaxReport>
 {/* <ImportOpeningStock></ImportOpeningStock> */}
 {/* <Customergroups></Customergroups> */}
 {/* <Unit></Unit> */}
@@ -202,6 +239,7 @@ function App() {
 {/* <Contactlist></Contactlist> */}
 {/* <Productlist></Productlist> */}
 {/* <PurchaseList></PurchaseList> */}
+{/* <PurchaseCreate></PurchaseCreate> */}
 </>
 );
   

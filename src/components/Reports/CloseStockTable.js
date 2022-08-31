@@ -58,41 +58,40 @@ export default function CloseStockTable() {
       }
     }} >
         <Table style={{ minWidth: 200}} aria-label="customized table">
-    
-        <TableBody>        
-            <StyledTableRow>
-                <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Opening  stock</Typography><Typography sx={reportStyles.reportTabletxt}>(By purchase price):</Typography></StyledTableCell>
-                <StyledTableCell align="left">₹ 37,109.42</StyledTableCell>
-            </StyledTableRow>
-            <StyledTableRow>
-                <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Opening stock</Typography><Typography sx={reportStyles.reportTabletxt}>(By sale price):</Typography></StyledTableCell>
-                <StyledTableCell align="left">₹ 37,109.42</StyledTableCell>
-            </StyledTableRow>
-            <StyledTableRow>
-                <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Total Sales:</Typography><Typography sx={reportStyles.reportTabletxt}>(Exc. tax, Discount)</Typography></StyledTableCell>
-                <StyledTableCell align="left">₹ 8,593.75</StyledTableCell>
-            </StyledTableRow>
-            <StyledTableRow>
-                <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Total sell shipping charge:	</Typography></StyledTableCell>
-                <StyledTableCell align="left">₹ 8,593.75</StyledTableCell>
-            </StyledTableRow>
-            <StyledTableRow>
-                <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Total Stock Recovered:</Typography></StyledTableCell>
-                <StyledTableCell align="left">₹ 0.00</StyledTableCell>
-            </StyledTableRow>
-            <StyledTableRow>
-                <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Total Purchase Return:	</Typography></StyledTableCell>
-                <StyledTableCell align="left">₹ 0.00</StyledTableCell>
-            </StyledTableRow>
-            <StyledTableRow>
-                <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Total Purchase discount:	</Typography></StyledTableCell>
-                <StyledTableCell align="left">₹ 0.00</StyledTableCell>
-            </StyledTableRow>
-            <StyledTableRow>
-                <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Total sell round off:	</Typography></StyledTableCell>
-                <StyledTableCell align="left">₹ 0.00</StyledTableCell>
-            </StyledTableRow>
-        </TableBody>
+          <TableBody>        
+              <StyledTableRow>
+                  <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Opening  stock</Typography><Typography sx={reportStyles.reportTabletxt}>(By purchase price):</Typography></StyledTableCell>
+                  <StyledTableCell align="left">₹ 37,109.42</StyledTableCell>
+              </StyledTableRow>
+              <StyledTableRow>
+                  <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Opening stock</Typography><Typography sx={reportStyles.reportTabletxt}>(By sale price):</Typography></StyledTableCell>
+                  <StyledTableCell align="left">₹ 37,109.42</StyledTableCell>
+              </StyledTableRow>
+              <StyledTableRow>
+                  <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Total Sales:</Typography><Typography sx={reportStyles.reportTabletxt}>(Exc. tax, Discount)</Typography></StyledTableCell>
+                  <StyledTableCell align="left">₹ 8,593.75</StyledTableCell>
+              </StyledTableRow>
+              <StyledTableRow>
+                  <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Total sell shipping charge:	</Typography></StyledTableCell>
+                  <StyledTableCell align="left">₹ 8,593.75</StyledTableCell>
+              </StyledTableRow>
+              <StyledTableRow>
+                  <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Total Stock Recovered:</Typography></StyledTableCell>
+                  <StyledTableCell align="left">₹ 0.00</StyledTableCell>
+              </StyledTableRow>
+              <StyledTableRow>
+                  <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Total Purchase Return:	</Typography></StyledTableCell>
+                  <StyledTableCell align="left">₹ 0.00</StyledTableCell>
+              </StyledTableRow>
+              <StyledTableRow>
+                  <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Total Purchase discount:	</Typography></StyledTableCell>
+                  <StyledTableCell align="left">₹ 0.00</StyledTableCell>
+              </StyledTableRow>
+              <StyledTableRow>
+                  <StyledTableCell><Typography sx={reportStyles.reportTableBoldtxt}>Total sell round off:	</Typography></StyledTableCell>
+                  <StyledTableCell align="left">₹ 0.00</StyledTableCell>
+              </StyledTableRow>
+          </TableBody>
       </Table>
     </TableContainer>
   );

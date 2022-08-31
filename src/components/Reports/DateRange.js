@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-daterangepicker/daterangepicker.css";
 import moment from "moment";
 
-export default function DateRange() {
+function DateRange() {
   const [fromDate, setFromDate] = useState(new Date());
   const [toDate, setToDate] = useState(new Date());
   const range = {
@@ -44,7 +44,7 @@ export default function DateRange() {
       <DateRangePicker
         // startDate={new Date()}
         // endDate={new Date()}
-        ranges={range}
+        range={range}
         alwaysShowCalendars={true}
         onEvent={handleEvent}
       >
@@ -55,3 +55,4 @@ export default function DateRange() {
     </div>
   );
 }
+export default DateRange;
