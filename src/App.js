@@ -22,25 +22,31 @@ import React from 'react';
 //  import ImportOpeningStock from './components/Product/ImportOpeningStock/ImportOpeningStock';
 
 // // Report MODULE
-import ProfitLoss from './components/Reports/ProfitLoss';
-import ProductSell from './components/Reports/ProductSell';
-import ServiceStaff from './components/Reports/ServiceStaff';
-import TableReport from './components/Reports/TableReport';
-import SalesRepresentative from './components/Reports/SalesRepresentative';
-import RegisterReport from './components/Reports/RegisterReport';
-import ExpenseReport from './components/Reports/Expense';
-import SellPayment from './components/Reports/SellPayment';
-import PurchasePayment from './components/Reports/PurchasePayment';
-import ProductPurchase from './components/Reports/ProductPurchase';
+// import ProfitLoss from './components/Reports/ProfitLoss';
+// import ProductSell from './components/Reports/ProductSell';
+// import ServiceStaff from './components/Reports/ServiceStaff';
+// import TableReport from './components/Reports/TableReport';
+// import SalesRepresentative from './components/Reports/SalesRepresentative';
+// import RegisterReport from './components/Reports/RegisterReport';
+// import ExpenseReport from './components/Reports/Expense';
+// import SellPayment from './components/Reports/SellPayment';
+// import PurchasePayment from './components/Reports/PurchasePayment';
+// import ProductPurchase from './components/Reports/ProductPurchase';
 // import PurchasesSale from './components/Reports/PurchasesSale';
-import ItemReport from './components/Reports/ItemReport';
-import TrendingProducts from './components/Reports/Trending';
-import StockAdjustment from './components/Reports/StockAdjustment';
-import StockReport from './components/Reports/StockReport';
-import CustomerGroup from './components/Reports/CustomerGroup';
-import SupplierCustomer from './components/Reports/SupplierCustomer';
-import TaxReport from './components/Reports/TaxReport';
+// import ItemReport from './components/Reports/ItemReport';
+// import TrendingProducts from './components/Reports/Trending';
+// import StockAdjustment from './components/Reports/StockAdjustment';
+// import StockReport from './components/Reports/StockReport';
+// import CustomerGroup from './components/Reports/CustomerGroup';
+// import SupplierCustomer from './components/Reports/SupplierCustomer';
+// import TaxReport from './components/Reports/TaxReport';
 
+// settings module
+import Barcode from './components/Settings/Barcode';
+
+// import BusinessLocation from './components/Settings/BusinessLocation';
+// import TaxRates from './components/Settings/TaxRates/TaxRates';
+// import Invoice from './components/Settings/Invoice';
 
 // import DateRange from './components/Reports/DateRange'
 
@@ -195,29 +201,33 @@ function App() {
 
   //   </div>
 <>
+{/* <BusinessLocation></BusinessLocation> */}
+{/* <Invoice></Invoice> */}
+{/* <TaxRates></TaxRates> */}
+<Barcode></Barcode>
 {/* <DateRange></DateRange> */}
 {/* <Unit></Unit> */}
 {/* <Brand></Brand> */}
 {/* <Categories></Categories> */}
 {/* <Warranties></Warranties> */}
-<ProfitLoss></ProfitLoss>
+{/* <ProfitLoss></ProfitLoss>
 <ProductSell></ProductSell>
-<ServiceStaff></ServiceStaff>
+<ServiceStaff></ServiceStaff> */}
 {/* <TableReport></TableReport> */}
-<SalesRepresentative></SalesRepresentative>
+{/* <SalesRepresentative></SalesRepresentative> */}
 {/* <RegisterReport></RegisterReport> */}
-<ExpenseReport></ExpenseReport>
+{/* <ExpenseReport></ExpenseReport>
 <SellPayment></SellPayment>
 <PurchasePayment></PurchasePayment>
-<ProductPurchase></ProductPurchase>
+<ProductPurchase></ProductPurchase> */}
 {/* <PurchasesSale></PurchasesSale> */}
-<ItemReport></ItemReport>
+{/* <ItemReport></ItemReport>
 <TrendingProducts></TrendingProducts>
 <StockAdjustment></StockAdjustment>
 <StockReport></StockReport>
 <CustomerGroup></CustomerGroup>
-<SupplierCustomer></SupplierCustomer>
-<TaxReport></TaxReport>
+<SupplierCustomer></SupplierCustomer> */}
+{/* <TaxReport></TaxReport> */}
 {/* <ImportOpeningStock></ImportOpeningStock> */}
 {/* <Customergroups></Customergroups> */}
 {/* <Unit></Unit> */}

@@ -1,0 +1,76 @@
+export const SettingStyle = {
+
+    container:{
+        backgroundColor: 'rgb(255, 255, 255)',
+        color: 'rgb(97, 97, 97)',
+        borderRadius: '5px',
+        overflow: 'hidden',
+        height: 'max-content',
+        padding:'15PX',
+    },
+    UnitHeaderText:{
+        fontFamily:"'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif",
+        fontSize: "23px",
+        fontWeight: "400",
+        margin:"10px 30px",
+        color: "#384460 !important",
+    },
+    UnitSubHeaderText:{
+        fontSize: "15px",
+        display: "inline-block",
+        paddingLeft: "4px",
+        fontWeight: "300",
+        lineHeight: "1",
+        color: "#777",
+    },
+    boxheadertxt:{
+        fontFamily: "'Source Sans Pro',sans-serif",
+        fontSize: "18px",
+        margin: "0",
+        lineHeight: "1",
+        color:" #32325d !important",
+    },
+    spanIcons : {
+        fontSize: '16px', 
+        paddingTop: '7px !important', 
+        paddingLeft: '11px',
+        paddingRight: '1px',
+        margin: 'auto', 
+        border: '1px solid #b97df0', 
+        width: '45px !important', 
+        height: '40px', 
+        backgroundColor: 'white', 
+        color: '#7009ab' ,
+    },
+    boxAddButton:{
+        backgroundColor: '#7009AB !important',
+        color: '#A5BECC',
+        marginRight: '5px !important',
+        height: '40px !important',
+        padding: '10px !important',
+        fontWeight: '600 !important',
+        borderRadius: '7px !important',
+        float: 'right !important',
+        border: '0px !important',
+        '&:hover' : {
+            backgroundColor: '#fff !important',
+            border: '1px solid #7009AB !important',
+            color: '#A5BECC !important',
+        float:" right !important",
+    },
+},
+
+    exportBtnText:{
+        borderRadius:" 3px !important",
+        padding: "0",
+        border:"1px solid #ddd !important",
+        backgroundColor:" #FBF2FF !important",
+        color:" #7009AB !important",
+        margin:"1px",
+        textTransform:'Capitalize',
+    },
+    tablecontainer:{
+        boxShadow:'none',
+    },
+  
+}
